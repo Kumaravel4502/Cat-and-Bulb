@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat&bulb</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section>
+        <div class="2xl:container bg-black h-screen">
+            <div class="w-[90%] bg-black flex flex-col items-center justify-center h-screen mx-auto">
+                <div class="w-fit flex flex-col">
+                    <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="bulb" class="h-44" id="bulbon">
+                    <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat" class="h-44" id="caton">
+                    <div class="bg-slate-700 flex flex-col justify-center items-center p-5 space-y-2 rounded-xl">
+                        <p class="text-white" id="para">Switched On</p>
+                        <div class="flex justify-center space-x-2">
+                            <button class="text-white bg-red-500 px-3" id="btnoff">off</button>
+                            <button class="text-white bg-slate-300 px-3" id="btnon">on</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const bulb = document.getElementById("bulbon")
+        const cat = document.getElementById("caton")
+        
+        const para = document.getElementById("para")
+
+        const btnon = document.getElementById("btnon")
+        const btnoff = document.getElementById("btnoff")
+
+        btnon.addEventListener("click",()=>{
+            console.log("On btn clicked")
+            para.textContent = "Switched On"
+            bulb.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png"
+            cat.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+        })
+
+        btnoff.addEventListener("click",()=>{
+            console.log("Off btn clicked")
+            para.textContent = "Switched Off"
+            bulb.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+            cat.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png"
+        })
+
+    </script>
+</body>
+</html>
